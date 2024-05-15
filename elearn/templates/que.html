@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+  
+
+<style>
+       
+        
+    #top-nav {
+        background-color: #f4f4f4;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    #content {
+        display: flex;
+        flex: 1;
+        padding: 20px;
+    }
+    
+    #sidebar {
+        width: 20%;
+        background-color: #f4f4f4;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .page {
+        flex: 1;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    
+    
+</style>
+
+<div id="quiz-container" class="page">
+    <h1>Abacus Test I</h1>
+
+    <!-- Question 1 -->
+    <div id="quiz" class="question">
+        <p>1. How many beads are there on the top row of an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="a"> 5</label>
+            <label><input type="radio" name="q1" value="b"> 10</label>
+            <label><input type="radio" name="q1" value="c"> 15</label>
+        </div>
+    </div>
+
+    <!-- Repeat for Questions 2 to 10 -->
+    <!-- Question 2 -->
+    <div id="quiz" class="question">
+        <p>2. What is the purpose of an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="a"> Counting and calculations</label>
+            <label><input type="radio" name="q2" value="b"> Timekeeping</label>
+            <label><input type="radio" name="q2" value="c"> Communication</label>
+        </div>
+    </div>
+
+    
+    <!-- Question 3 -->
+    <div id="quiz" class="question">
+        <p>3. In which direction do you typically move the beads on an abacus when performing addition?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="a"> Up</label>
+            <label><input type="radio" name="q3" value="b"> Down</label>
+            <label><input type="radio" name="q3" value="c"> Left</label>
+        </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div id="quiz" class="question">
+        <p>4. What is the purpose of the middle bar in an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="a"> Decoration</label>
+            <label><input type="radio" name="q4" value="b"> Separating rows</label>
+            <label><input type="radio" name="q4" value="c"> Counting</label>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div id="quiz" class="question">
+        <p>5. How do you represent the number 7 using an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="a"> One bead on the top row</label>
+            <label><input type="radio" name="q5" value="b"> Two beads on the bottom row</label>
+            <label><input type="radio" name="q5" value="c"> Three beads on the middle row</label>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div id="quiz" class="question">
+        <p>6. What is the purpose of the abacus in arithmetic?</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="a"> Counting</label>
+            <label><input type="radio" name="q6" value="b"> Writing</label>
+            <label><input type="radio" name="q6" value="c"> Drawing</label>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div id="quiz" class="question">
+        <p>7. Which ancient civilization is credited with the invention of the abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="a"> Greek</label>
+            <label><input type="radio" name="q7" value="b"> Roman</label>
+            <label><input type="radio" name="q7" value="c"> Chinese</label>
+        </div>
+    </div>
+
+    <!-- Question 8 -->
+    <div id="quiz" class="question">
+        <p>8. In subtraction, in which direction do you move the beads on an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="a"> Up</label>
+            <label><input type="radio" name="q8" value="b"> Down</label>
+            <label><input type="radio" name="q8" value="c"> Right</label>
+        </div>
+    </div>
+
+    <!-- Question 9 -->
+    <div id="quiz" class="question">
+        <p>9. What is the purpose of the reset bar on an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="a"> To clear the beads</label>
+            <label><input type="radio" name="q9" value="b"> To move beads upward</label>
+            <label><input type="radio" name="q9" value="c"> To separate rows</label>
+        </div>
+    </div>
+
+    <!-- Question 10 -->
+    <div id="quiz" class="question">
+        <p>10. Which finger is commonly used to move the beads on an abacus?</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="a"> Thumb</label>
+            <label><input type="radio" name="q10" value="b"> Index finger</label>
+            <label><input type="radio" name="q10" value="c"> Middle finger</label>
+        </div>
+    </div>
+
+
+    <button onclick="submitQuiz()">Submit</button>
+    <p id="result" class="result"></p>
+</div>
+
+<script>
+    function submitQuiz() {
+        const answers = ['b', 'a','a','b','a','a','c','b','a','b' ];
+        let score = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedOption) {
+                if (selectedOption.value === answers[i - 1]) {
+                    score++;
+                }
+            }
+        }
+
+        document.getElementById('result').innerHTML = `Your score: ${score}/10`;
+    }
+</script>
+
+{% endblock 'main' %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+
+<div class="row mt-3">
+    <div class="col md-9">
+        {% for x in data %}
+        {% if forloop.counter == 1 %}
+        <div class="md-3 p-3">
+          <h4>User Details</h4><br>
+          <p><strong>Name:</strong>{{x.uid.username}}</p>
+          <p><strong>Detail:</strong>{{x.uid.email}}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% for x in data %}
+        <div class="mt-5">
+            <div class="row">
+                <div class="col md-5">
+                    <img src="{{x.pid.cimage.url}}" class="card-img-top">
+                </div>
+                <div class="col md-7">
+                    <p><b>Course Name: </b>{{x.pid.name}}</p>
+                    <p><b>Detail: </b>{{x.pid.cdetail}}</p>
+
+                    {% if x.pid..cat == 1 %}
+                        <p><b>Category:</b>Frontend</p>
+                    {% elif x.pid..cat == 2 %}
+                        <p><b>Category:</b>Backend</p>
+                    {% elif x.pid..cat == 3 %}
+                        <p><b>Category:</b>Database</p>
+                    {% else %}
+                        <p><b>Category:</b>Development</p>
+                    {% endif %}
+
+                    <p><b>Price: </b>{{x.pid.price}}</p>
+                    <!-- <p>
+                        <b>Qty:</b>
+                        <a href="/updateqty/0/{{x.id}}"><button class="btn btn-outline-dark"><b>-</b></button></a>
+                        <input type="text" value="{{x.qty}}">
+                        <a href="/updateqty/1/{{x.id}}"><button class="btn btn-outline-dark"><b>+</b></button></a>
+                    </p>
+                    <p>
+                        <a href="/remove/{{x.id}}" class="btn btn-outline-primary">Remove</a> -->
+                    </p>
+                </div>
+            </div>
+        </div><!--Product 1-->
+        {% endfor %}
+    </div>
+    <div class="col md-3 mt-5 p-3">
+        <p><strong>Price ({{n}} items):</strong> Rs. {{total}}</p>
+        <p><strong>Total price:</strong> Rs. {{total}}</p>
+        <p><a href="/placeorder"><button class="btn btn-outline-primary">Start Subscription</button></a></p>
+    </div>
+</div>
+{% endblock 'main' %}

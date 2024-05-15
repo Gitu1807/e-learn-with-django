@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block 'main' %}
+    <div class="roe mt-3">
+        <div class="col-md-9 mx-auto">
+
+            <div class="row">
+                {% for x in data %}
+                <div class="col-md-5">
+                    <img src="{{x.cimage.url}}" class="card-img-top" alt="...">
+                </div>
+                <div class="col-md-7">
+                    {% if msg %}
+                        <div class="alert alert-success">
+                            {{msg}}
+                        </div>
+                    {% endif %}
+
+                    {% if errmsg %}
+                        <div class="alert alert-dark">
+                            {{errmsg}}
+                        </div>
+                    {% endif %}
+                    <br>
+                    <p><b>Course :</b>{{x.name}}</p>
+                    <p><b>Details :</b>{{x.cdetail}}</p>
+                    {% if x.cat == 1 %}
+                        <p><b>Category :</b>Frontend</p>
+                    {% elif x.cat == 2 %}
+                        <p><b>Category :</b>Backend</p>
+                    {% elif x.cat == 3 %}
+                        <p><b>Category :</b>Database</p>
+                    {% else %}
+                        <p><b>Category :</b>DevOps</p>
+                    {% endif %}
+                    <p><b>Price :</b>{{x.price}}</p>
+                    <p>
+                        <a href="/addtocart/{{x.id}}" class="btn btn-primary">Enroll now</a>
+                        <a href="/viewcart" class="btn btn-primary">Start Subscription</a>
+                        <a href="/courses" class="btn btn-primary">Explore new batches</a>
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock 'main' %}

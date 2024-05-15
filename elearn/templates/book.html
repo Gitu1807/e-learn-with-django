@@ -1,0 +1,302 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+        
+
+    <style>
+       
+        
+        #top-nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        #content {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+        
+        #sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .chapter-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .chapter-list li {
+            display: inline-block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        
+        .chapter-list li:hover {
+            color: #fd7e14;
+        }
+    </style>
+
+<div id="top-nav" >
+    <ul class="chapter-list" >
+        <li onclick="goToPage(1)">Chapter 1: Introduction to Abacus
+
+        </li>
+        <li onclick="goToPage(2)">Chapter 2: The Journey Begins</li>
+        <li onclick="goToPage(3)">Chapter 3: Challenges Ahead</li>
+        <!-- Add more chapters as needed -->
+    </ul>
+</div>
+
+<div id="content">
+   
+    <div class="page" id="page1">
+        <h1>Chapter 1: Introduction</h1> <br>
+        <h4>Lesson 1: Meet the Abacus        </h4> 
+        <h6><a href="#home">Overview of Abacus Parts:   </a>     </h6>
+        <br>
+        <p> The abacus is a powerful mathematical tool that has been used for centuries. To understand and utilize the abacus effectively, it's essential to become familiar with its parts.
+            <br> <br>
+            <strong>Frame:</strong> The outer structure that holds the entire abacus together.
+            <br> <br>
+            <strong>Beads:</strong> The movable objects on the rods or wires. Beads represent different values depending on their position.
+            <br> <br>
+            <strong>Rods/Wires:</strong> Vertical lines on which beads are placed. Each rod represents a specific place value (units, tens, hundreds).</p>
+        <h6><a href="#home">Understanding the Columns (Units, Tens, Hundreds):</a></h6><br>
+        <p>The abacus is organized into columns, each representing a specific place value. Understanding these columns is fundamental to performing calculations.
+<br><br>
+            <strong>Units Column:</strong>The rightmost column represents single-digit numbers (0-9).
+    <br>        <br>
+            <strong>Tens Column:</strong> The middle column represents multiples of ten.
+        <br>    <br>
+            <strong>Hundreds Column:</strong> The leftmost column represents multiples of one hundred.</p>
+
+        <h6><a href="#home">Introduction to Beads and Their Values:</a></h6><br>
+        <p>Beads are the heart of the abacus, and each bead holds a specific value based on its position.
+<br><br>
+            <strong>Lower Beads (Earth Beads):</strong>Represent the unit's place (1-9).
+    <br>        <br>
+            <strong>Upper Beads (Heaven Beads):</strong> Represent multiples of ten (10, 20, 30, ...).
+        <br>    <br>
+            <strong>Horizontal Bar (Separator): </strong> Separates the units and tens columns, making it easier to read and calculate.</p>
+
+
+        <h4>Lesson 2: Abacus Layout        </h4> 
+        <h6><a href="#home">Learning How to Position the Abacus:        </a>     </h6>
+        <br>
+        <p> Proper positioning of the abacus is crucial for efficient calculations.
+            <br> <br>
+            <strong>Placement:</strong> Sit comfortably with a straight posture.
+            <br> <br>
+            <strong>Tabletop Position:</strong> Place the abacus on a flat surface like a table or desk.
+            <br> <br>
+            <strong>Eye Level: </strong> Ensure the abacus is at eye level to facilitate easy reading and manipulation.
+
+        </p>
+        <h6><a href="#home">Identifying the Rows and Columns:        </a></h6><br>
+        <p>Understanding the abacus layout involves recognizing the rows and columns.
+<br><br>
+            <strong>Vertical Columns:</strong> Visualize the vertical lines (rods) representing units, tens, and hundreds.
+    <br>        <br>
+            <strong>Horizontal Rows:</strong> Notice the rows of beads on each rod. The beads in each row represent specific values.
+        <br>    <br>
+        </p>
+
+        <h6><a href="#home">Understanding the Placement of Zero (0):
+        </a></h6><br>
+        <p>Zero holds a unique place on the abacus and plays a significant role in numerical representation.
+<br><br>
+            <strong>Zero in the Units Column:</strong>When there are no lower beads in the units column, it signifies zero.
+    <br>        <br>
+            <strong>Concept of an Empty Rod:</strong>An empty rod in any column represents zero for that place value.
+        <br>    <br>
+            <strong>Location of Zero:  </strong>  Emphasize the importance of the zero position in numerical sequencing.
+
+            <br><br>
+            <strong>Conclusion:
+            </strong>
+            <br><br>
+            Mastering the abacus begins with a solid understanding of its structure and layout. In this lesson, we've explored the parts of the abacus, the significance of columns, and the values associated with beads. Additionally, we've delved into the correct positioning of the abacus and the crucial role of zero in numerical representation. As we progress through the lessons, these foundational concepts will form the basis for performing calculations with confidence and accuracy.
+        </p>
+    </div>
+
+
+    <div class="page" id="page2">
+        <h1>Chapter 3: Introduction</h1> <br>
+        <h4>Lesson 4: Meet the Abacus        </h4> 
+        <h6><a href="#home">Overview of Abacus Parts:   </a>     </h6>
+        <br>
+        <p> The abacus is a powerful mathematical tool that has been used for centuries. To understand and utilize the abacus effectively, it's essential to become familiar with its parts.
+            <br> <br>
+            <strong>Frame:</strong> The outer structure that holds the entire abacus together.
+            <br> <br>
+            <strong>Beads:</strong> The movable objects on the rods or wires. Beads represent different values depending on their position.
+            <br> <br>
+            <strong>Rods/Wires:</strong> Vertical lines on which beads are placed. Each rod represents a specific place value (units, tens, hundreds).</p>
+        <h6><a href="#home">Understanding the Columns (Units, Tens, Hundreds):</a></h6><br>
+        <p>The abacus is organized into columns, each representing a specific place value. Understanding these columns is fundamental to performing calculations.
+<br><br>
+            <strong>Units Column:</strong>The rightmost column represents single-digit numbers (0-9).
+    <br>        <br>
+            <strong>Tens Column:</strong> The middle column represents multiples of ten.
+        <br>    <br>
+            <strong>Hundreds Column:</strong> The leftmost column represents multiples of one hundred.</p>
+
+        <h6><a href="#home">Introduction to Beads and Their Values:</a></h6><br>
+        <p>Beads are the heart of the abacus, and each bead holds a specific value based on its position.
+<br><br>
+            <strong>Lower Beads (Earth Beads):</strong>Represent the unit's place (1-9).
+    <br>        <br>
+            <strong>Upper Beads (Heaven Beads):</strong> Represent multiples of ten (10, 20, 30, ...).
+        <br>    <br>
+            <strong>Horizontal Bar (Separator): </strong> Separates the units and tens columns, making it easier to read and calculate.</p>
+
+
+        <h4>Lesson 2: Abacus Layout        </h4> 
+        <h6><a href="#home">Learning How to Position the Abacus:        </a>     </h6>
+        <br>
+        <p> Proper positioning of the abacus is crucial for efficient calculations.
+            <br> <br>
+            <strong>Placement:</strong> Sit comfortably with a straight posture.
+            <br> <br>
+            <strong>Tabletop Position:</strong> Place the abacus on a flat surface like a table or desk.
+            <br> <br>
+            <strong>Eye Level: </strong> Ensure the abacus is at eye level to facilitate easy reading and manipulation.
+
+        </p>
+        <h6><a href="#home">Identifying the Rows and Columns:        </a></h6><br>
+        <p>Understanding the abacus layout involves recognizing the rows and columns.
+<br><br>
+            <strong>Vertical Columns:</strong> Visualize the vertical lines (rods) representing units, tens, and hundreds.
+    <br>        <br>
+            <strong>Horizontal Rows:</strong> Notice the rows of beads on each rod. The beads in each row represent specific values.
+        <br>    <br>
+        </p>
+
+        <h6><a href="#home">Understanding the Placement of Zero (0):
+        </a></h6><br>
+        <p>Zero holds a unique place on the abacus and plays a significant role in numerical representation.
+<br><br>
+            <strong>Zero in the Units Column:</strong>When there are no lower beads in the units column, it signifies zero.
+    <br>        <br>
+            <strong>Concept of an Empty Rod:</strong>An empty rod in any column represents zero for that place value.
+        <br>    <br>
+            <strong>Location of Zero:  </strong>  Emphasize the importance of the zero position in numerical sequencing.
+
+            <br><br>
+            <strong>Conclusion:
+            </strong>
+            <br><br>
+            Mastering the abacus begins with a solid understanding of its structure and layout. In this lesson, we've explored the parts of the abacus, the significance of columns, and the values associated with beads. Additionally, we've delved into the correct positioning of the abacus and the crucial role of zero in numerical representation. As we progress through the lessons, these foundational concepts will form the basis for performing calculations with confidence and accuracy.
+        </p>
+    </div>
+
+
+    <div class="page" id="page3">
+        <h1>Chapter 2: Basic Abacus Movements</h1> <br>
+        <h4>Lesson 3: Right to Left Movement       </h4> 
+        <h6><a href="#home">Practicing Moving Beads from Right to Left:
+        </a>     </h6>
+        <br>
+        <p> Imagine you are a superhero moving through time and numbers! Today, we'll practice moving our abacus beads from the right side to the left side.
+            <br> <br>
+            <strong>Start at the Right:</strong> Look at the number on the right side. That's where our journey begins.
+            <br> <br>
+            <strong>Move One Bead at a Time:</strong>Imagine you are taking tiny steps. Move one bead at a time towards the left.
+            <br> <br>
+            <strong>Count Out Loud: </strong> As you move each bead, say the number out loud. It's like a little chant that helps us remember.
+            <br> <br>
+            <strong>Stop at the Left Side:  </strong>  Once you reach the left side, look at all the beads you moved.</p>
+        <h6><a href="#home">Counting Single-Digit Numbers Using Beads:</a></h6><br>
+        <p>Now that we know how to move beads, let's use them to count single-digit numbers.
+<br><br>
+            <strong>Pick a Number: </strong>Choose a number, maybe 3 or 7.
+    <br>        <br>
+            <strong>Move the Beads: </strong> Start at the right and move the beads one by one. Count out loud as you go.
+        <br>    <br>
+            <strong>Reach the Left Side:</strong> When you reach the left side, look at the beads you moved. That's the number you picked!
+        <br>    <br>
+            <strong>Practice, Practice: </strong> Keep practicing with different numbers until you become a counting superhero.
+
+        </p>
+
+        <h6><a href="#home">Introduction to Beads and Their Values:</a></h6><br>
+        <p>Beads are the heart of the abacus, and each bead holds a specific value based on its position.
+<br><br>
+            <strong>Lower Beads (Earth Beads):</strong>Represent the unit's place (1-9).
+    <br>        <br>
+            <strong>Upper Beads (Heaven Beads):</strong> Represent multiples of ten (10, 20, 30, ...).
+        <br>    <br>
+            <strong>Horizontal Bar (Separator): </strong> Separates the units and tens columns, making it easier to read and calculate.</p>
+
+
+        <h4>Lesson 2: Abacus Layout        </h4> 
+        <h6><a href="#home">Learning How to Position the Abacus:        </a>     </h6>
+        <br>
+        <p> Proper positioning of the abacus is crucial for efficient calculations.
+            <br> <br>
+            <strong>Placement:</strong> Sit comfortably with a straight posture.
+            <br> <br>
+            <strong>Tabletop Position:</strong> Place the abacus on a flat surface like a table or desk.
+            <br> <br>
+            <strong>Eye Level: </strong> Ensure the abacus is at eye level to facilitate easy reading and manipulation.
+
+        </p>
+        <h6><a href="#home">Identifying the Rows and Columns:        </a></h6><br>
+        <p>Understanding the abacus layout involves recognizing the rows and columns.
+<br><br>
+            <strong>Vertical Columns:</strong> Visualize the vertical lines (rods) representing units, tens, and hundreds.
+    <br>        <br>
+            <strong>Horizontal Rows:</strong> Notice the rows of beads on each rod. The beads in each row represent specific values.
+        <br>    <br>
+        </p>
+
+        <h6><a href="#home">Understanding the Placement of Zero (0):
+        </a></h6><br>
+        <p>Zero holds a unique place on the abacus and plays a significant role in numerical representation.
+<br><br>
+            <strong>Zero in the Units Column:</strong>When there are no lower beads in the units column, it signifies zero.
+    <br>        <br>
+            <strong>Concept of an Empty Rod:</strong>An empty rod in any column represents zero for that place value.
+        <br>    <br>
+            <strong>Location of Zero:  </strong>  Emphasize the importance of the zero position in numerical sequencing.
+
+            <br><br>
+            <strong>Conclusion:
+            </strong>
+            <br><br>
+            Mastering the abacus begins with a solid understanding of its structure and layout. In this lesson, we've explored the parts of the abacus, the significance of columns, and the values associated with beads. Additionally, we've delved into the correct positioning of the abacus and the crucial role of zero in numerical representation. As we progress through the lessons, these foundational concepts will form the basis for performing calculations with confidence and accuracy.
+        </p>
+    </div>
+
+    <!-- Add more pages as needed -->
+</div>
+
+<script>
+    
+    function goToPage(pageNumber) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.style.display = 'none';
+        });
+
+        // Show the selected page
+        document.getElementById(`page${pageNumber}`).style.display = 'block';
+    }
+</script>
+
+
+{% endblock 'main' %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<style>
+    /* CSS for centering the video */
+    .video-container {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+       
+            
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="min-height: 300px;">
+                <img class="position-relative w-100" src="{% static 'img/home4.jpg' %}" style="min-height: 300px; object-fit: cover;">
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="p-5" style="width: 100%; max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-md-3">Best  Courses</h5>
+                        <h1 class="display-3 text-white mb-md-4">Best Education in Akurdi</h1>
+                        <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Carousel End -->
+<div class="container">
+    <h1>Welcome to My YouTube Channel!</h1>
+    <div class="video-container">
+        <!-- Embedded YouTube Video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/about2.jpg' %}" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                <h1 class="mb-4">Welcome to VISION Academy</h1>
+                <p class="mb-4">Welcome to VISION Academy, where educational excellence meets visionary empowerment. Founded with a passion for nurturing minds and shaping futures, we are dedicated to providing a dynamic learning environment that goes beyond traditional boundaries.</p>
+                <p class="mb-4">Our comprehensive curriculum is designed to not only meet academic standards but also to instill values, leadership skills, and a sense of social responsibility. We aim to prepare our students not just for exams but for the challenges and opportunities that lie ahead in an ever-evolving world.</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0">Skilled Instructors</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0">Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0">International Certificate</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0">Skilled Instructors</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0">Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0">International Certificate</p>
+                    </div>
+                </div>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="/about">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+{% endblock 'main' %}
